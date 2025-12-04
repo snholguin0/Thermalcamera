@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Thermal Camera Demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-content">
+      <h1>Thermal Camera Live Demo</h1>
+      <p>
+        Raspberry Pi + AMG8833 thermal sensor. Move your hand and watch the heat map react
+        in real time.
+      </p>
+      <div class="hero-tags">
+        <span>Raspberry Pi 4</span>
+        <span>AMG8833</span>
+        <span>Python + matplotlib</span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- LIVE DEMO SECTION -->
+    <section class="section" id="live-demo">
+      <div class="section-header">
+        <h2>Live Thermal View</h2>
+        <p>
+          This panel shows the live output from the thermal camera running on the Raspberry Pi.
+          Use the mode buttons to switch between views on the Pi.
+        </p>
+      </div>
+
+      <div class="demo-layout">
+        <div class="demo-panel">
+          <!-- This <img> will pull frames from your Pi stream -->
+          <div class="demo-frame">
+            <img
+              id="thermal-stream"
+              src=""
+              alt="Live thermal camera stream"
+            />
+            <div id="stream-overlay" class="stream-overlay">
+              <span id="mode-label">Mode 0: Simple thermal view</span>
+            </div>
+          </div>
+
+          <div class="demo-controls">
+            <button data-mode="0" class="mode-btn mode-btn-active">
+              Mode 0 – Thermal
+            </button>
+            <button data-mode="1" class="mode-btn">
+              Mode 1 – Heat Pen
+            </button>
+            <button data-mode="2" class="mode-btn">
+              Mode 2 – Laser Grid
+            </button>
+          </div>
+
+          <p class="demo-note">
+            The Pi listens for keyboard input directly, so these buttons only change the label
+            on the website. On the Pi, press <strong>m</strong> to cycle modes.
+          </p>
+        </div>
+
+        <aside class="demo-side">
+          <h3>How to use the live demo</h3>
+          <ol>
+            <li>Stand 6–18 inches above the sensor.</li>
+            <li>Move your hand slowly so the heat has time to show up.</li>
+            <li>Switch modes on the Pi with the keyboard:</li>
+          </ol>
+          <ul class="key-list">
+            <li><span class="key">m</span> – change mode (0 → 1 → 2)</li>
+          </ul>
+          <p>
+            The web page just mirrors whatever the Pi is currently displaying.
+          </p>
+        </aside>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="section alt" id="how-it-works">
+      <div class="section-header">
+        <h2>How It Works</h2>
+      </div>
+      <div class="grid two">
+        <div>
+          <h3>Hardware</h3>
+          <ul>
+            <li>Raspberry Pi 4 Model B</li>
+            <li>Adafruit AMG8833 8×8 thermal camera</li>
+            <li>Solderless breadboard + jumper wires</li>
+            <li>5V active buzzer (optional, currently disabled)</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Software</h3>
+          <ul>
+            <li>Python to read the AMG8833 over I²C</li>
+            <li>NumPy + SciPy for processing and smoothing</li>
+            <li>matplotlib for the color heat map</li>
+            <li>Three demo modes: thermal, heat pen, laser grid</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- MODES EXPLANATION -->
+    <section class="section" id="modes">
+      <div class="section-header">
+        <h2>Modes</h2>
+      </div>
+
+      <div class="grid three">
+        <div class="card">
+          <h3>Mode 0 – Thermal View</h3>
+          <p>
+            A clean heat map of the 8×8 sensor, upscaled for smoother color gradients.
+            Great for showing the basic idea of thermal imaging and how your hand heats up
+            the scene.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Mode 1 – Heat Pen</h3>
+          <p>
+            The hottest part of your hand becomes a “pen.” Move your hand to draw bright
+            blobs that slowly fade away. Kids can “paint” on the screen with heat.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Mode 2 – Laser Grid</h3>
+          <p>
+            The image is split into four zones. When a zone warms up past the background,
+            its square turns red and the text shows which zones were “tripped.”
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY / PHOTOS -->
+    <section class="section alt" id="gallery">
+      <div class="section-header">
+        <h2>Project Photos</h2>
+        <p>Add screenshots and build photos here.</p>
+      </div>
+
+      <div class="grid three gallery-grid">
+        <!-- Replace these src values with your real images later -->
+        <div class="gallery-item placeholder">Thermal hand view</div>
+        <div class="gallery-item placeholder">Heat pen drawing</div>
+        <div class="gallery-item placeholder">Laser grid zones</div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>
+      Built with Raspberry Pi and Python ·
+      <span>Thermal Camera Project</span>
+    </p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
