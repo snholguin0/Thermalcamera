@@ -100,71 +100,65 @@
   </section>
 
   <!-- HOW IT WORKS + MODES -->
-  <section class="section alt">
-    <div class="grid two">
+<section class="section alt">
+  <div class="section-header">
+    <h2>How It Works</h2>
+    <p>A quick overview of the hardware, software, and interaction modes of the IoT thermal camera system.</p>
+  </div>
 
-      <div class="card">
-        <h3>How It Works</h3>
-        <p><strong>Hardware</strong></p>
-        <ul>
-          <li>Raspberry Pi 4 Model B</li>
-          <li>Adafruit AMG8833 8×8 thermal camera</li>
-          <li>Solderless breadboard + jumper wires</li>
-        </ul>
+  <div class="grid two">
+    <div class="card">
+      <h3>Hardware</h3>
+      <ul>
+        <li>Raspberry Pi 4 Model B</li>
+        <li>Adafruit AMG8833 8×8 thermal camera</li>
+        <li>Solderless breadboard + jumper wires</li>
+      </ul>
 
-        <p style="margin-top:.5rem;"><strong>Software</strong></p>
-        <ul>
-          <li>Python + I²C to read the AMG8833</li>
-          <li>NumPy + SciPy for processing and smoothing</li>
-          <li>Flask server to stream frames to the website</li>
-        </ul>
-      </div>
-
-      <div class="card">
-        <h3>Modes</h3>
-
-        <p><strong>Mode 0 – Thermal View</strong><br>
-          A clean heat map of the 8×8 sensor, upscaled for smoother color gradients.
-        </p>
-
-        <p><strong>Mode 1 – Heat Pen</strong><br>
-          The hottest part of your hand becomes a “pen.” Moving your hand draws bright blobs that slowly fade.
-        </p>
-
-        <p><strong>Mode 2 – Laser Grid</strong><br>
-          The image is split into four zones. When a zone warms past the background, its square turns red and the
-          text shows which zones were “tripped.”
-        </p>
-      </div>
-
+      <h3 style="margin-top: 1rem;">Software</h3>
+      <ul>
+        <li>Python + I²C to read the AMG8833</li>
+        <li>NumPy + SciPy for smoothing and processing</li>
+        <li>Flask server to stream frames to the website</li>
+      </ul>
     </div>
-  </section>
+
+    <div class="card">
+      <h3>Modes</h3>
+
+      <strong>Mode 0 – Thermal View</strong>
+      <p>A clean upscaled heat map of the 8×8 sensor for basic visualization.</p>
+
+      <strong>Mode 1 – Heat Pen</strong>
+      <p>The hottest spot of your hand acts like a “pen,” letting you draw heat strokes that fade over time.</p>
+
+      <strong>Mode 2 – Laser Grid</strong>
+      <p>The image is divided into four zones. When heat rises in a zone, that square highlights to show it was triggered.</p>
+    </div>
+  </div>
+</section>
+
 
   <!-- PROJECT PHOTOS -->
   <section class="section">
-    <div class="section-header">
-      <h2>Project Photos</h2>
-      <p>Snapshots from each of the main demo modes.</p>
-    </div>
+  <div class="section-header">
+    <h2>Project Photos</h2>
+    <p>Screenshots from the main demo modes.</p>
+  </div>
 
-    <div class="grid three gallery-grid">
-      <div class="gallery-item">
-        <img src="images/body outline.png"
-             alt="Simple thermal view"
-             style="max-width:100%; border-radius:0.7rem;">
-      </div>
-      <div class="gallery-item">
-        <img src="images/pen.png"
-             alt="Heat pen mode drawing"
-             style="max-width:100%; border-radius:0.7rem;">
-      </div>
-      <div class="gallery-item">
-        <img src="images/laser grid.png"
-             alt="Laser grid zones"
-             style="max-width:100%; border-radius:0.7rem;">
-      </div>
+  <div class="gallery-grid three">
+    <div class="gallery-item">
+      <img src="images/body outline.png" alt="Thermal View" />
     </div>
-  </section>
+    <div class="gallery-item">
+      <img src="images/pen.png" alt="Heat Pen Demo" />
+    </div>
+    <div class="gallery-item">
+      <img src="images/laser grid.png" alt="Laser Grid Mode" />
+    </div>
+  </div>
+</section>
+
 
   <footer class="footer">
     IoT Thermal Camera Project – Selena, Bryce, Jackson
