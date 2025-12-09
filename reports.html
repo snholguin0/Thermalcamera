@@ -8,100 +8,119 @@
 </head>
 
 <body>
-
   <!-- HERO -->
   <header class="hero">
     <div class="hero-content">
       <h1>Weekly Reports &amp; Research Paper</h1>
-      <p>Read summaries or download the full documents for the IoT Thermal Camera project.</p>
+      <p>Read quick summaries or download the full documents for the IoT Thermal Camera project.</p>
       <div class="hero-actions">
         <a href="index.html" class="button secondary">Back to Live Demo</a>
       </div>
     </div>
   </header>
 
-  <!-- MAIN -->
-  <section class="section">
-    <div class="section-header">
-      <h2>Project Documents</h2>
-      <p>Summaries are provided for quick review. Downloads include full details.</p>
-    </div>
+  <!-- MAIN CONTENT -->
+  <section class="section alt">
+    <div class="reports-container">
+      <header class="section-header">
+        <h2>Project Documents</h2>
+        <p>Summaries below; each download includes full details and supporting screenshots.</p>
+      </header>
 
-    <div class="grid two">
-
-      <!-- RESEARCH PAPER -->
-      <article class="card">
-        <h3>Research Paper</h3>
-        <p>
-          Explains the full development of the Raspberry Pi thermal camera: hardware setup, sensor behavior,
-          image processing, user interface design, and evaluation. Includes challenges, testing data, and how
-          the system connects to real-world IoT use cases.
-        </p>
-        <a class="button primary"
-           href="docs/Research Project.docx"
-           download>
-          Download Research Paper
-        </a>
-      </article>
-
-      <!-- WEEKLY REPORTS -->
-      <article class="card">
-        <h3>Weekly Progress Reports</h3>
-
-        <div style="margin-top:.5rem; line-height:1.6;">
-
-          <p><strong>Week 1 – 11/01/25</strong><br>
-            Introduced the project, set up the Raspberry Pi, installed libraries, and confirmed basic communication
-            with the AMG8833 sensor. Verified raw pixel output and began planning the demo modes.
+      <div class="reports-grid">
+        <!-- RESEARCH PAPER -->
+        <article class="doc-card doc-card-main">
+          <h3>Research Paper</h3>
+          <p>
+            Full write-up of the Raspberry Pi thermal camera system: hardware, sensor behavior, image processing
+            pipeline, user interface design, testing, and how this setup connects to real-world IoT applications.
           </p>
-          <a class="button small"
-             href="docs/Weekly Progress Report 11-01-2025.docx"
-             download>Download</a>
-          <hr>
+          <a class="button primary"
+             href="docs/Research Project.docx"
+             download>
+            Download Research Paper
+          </a>
+        </article>
 
-          <p><strong>Week 2 – 11/08/25 – Circuits Week</strong><br>
-            Focused on wiring and circuits. Cleaned up the breadboard layout, checked voltage levels, and ensured
-            stable readings from the sensor before moving on to visual output.
-          </p>
-          <a class="button small"
-             href="docs/Weekly Progress Report - 11_08_2025- the circuits.docx"
-             download>Download</a>
-          <hr>
+        <!-- WEEKLY REPORTS -->
+        <article class="doc-card">
+          <h3>Weekly Progress Reports</h3>
 
-          <p><strong>Week 3 – 11/15/25</strong><br>
-            Implemented image smoothing, basic color mapping, and early motion detection.
-            Experimented with upscale values and temperature thresholds to make the thermal image easier to read.
-          </p>
-          <a class="button small"
-             href="docs/Weekly Progress Report 11-15-25.docx"
-             download>Download</a>
-          <hr>
+          <div class="doc-list">
 
-          <p><strong>Week 4 – 11/22/25</strong><br>
-            Built out the three modes: simple thermal view, heat pen, and laser grid.
-            Tuned the logic for each mode and prepared screenshots for the website.
-          </p>
-          <a class="button small"
-             href="docs/Weekly Progress Report - 11_22_2025.docx"
-             download>Download</a>
-          <hr>
+            <div class="doc-row">
+              <div class="doc-text">
+                <div class="doc-title">Week 1 – 11/01/25</div>
+                <p>
+                  Kicked off the project. Set up the Raspberry Pi, installed libraries, verified communication with the
+                  AMG8833 sensor, and confirmed that raw pixel data looked correct.
+                </p>
+              </div>
+              <a class="button small"
+                 href="docs/Weekly Progress Report 11-01-2025.docx"
+                 download>Download</a>
+            </div>
 
-          <p><strong>Week 5 – 12/06/25</strong><br>
-            Integrated the live thermal feed into a Flask server, connected it to the website, and tested
-            everything together. Focused on performance, blur, and reliability for demo day.
-          </p>
-          <a class="button small"
-             href="docs/Weekly Progress Report 12-6-2025.docx"
-             download>Download</a>
+            <div class="doc-row">
+              <div class="doc-text">
+                <div class="doc-title">Week 2 – 11/08/25 – Circuits Week</div>
+                <p>
+                  Focused on wiring and circuits. Cleaned up the breadboard layout, checked voltages, and made sure the
+                  sensor readings stayed stable before moving on to visuals.
+                </p>
+              </div>
+              <a class="button small"
+                 href="docs/Weekly Progress Report - 11_08_2025- the circuits.docx"
+                 download>Download</a>
+            </div>
 
-        </div>
-      </article>
+            <div class="doc-row">
+              <div class="doc-text">
+                <div class="doc-title">Week 3 – 11/15/25</div>
+                <p>
+                  Added image smoothing, color mapping, and early motion detection. Tried different upscale values and
+                  temperature thresholds so heat patterns were easier to see.
+                </p>
+              </div>
+              <a class="button small"
+                 href="docs/Weekly Progress Report 11-15-25.docx"
+                 download>Download</a>
+            </div>
 
+            <div class="doc-row">
+              <div class="doc-text">
+                <div class="doc-title">Week 4 – 11/22/25</div>
+                <p>
+                  Built the three interaction modes: simple thermal view, heat pen, and laser grid. Tuned each mode,
+                  captured screenshots, and prepared for web integration.
+                </p>
+              </div>
+              <a class="button small"
+                 href="docs/Weekly Progress Report - 11_22_2025.docx"
+                 download>Download</a>
+            </div>
+
+            <div class="doc-row">
+              <div class="doc-text">
+                <div class="doc-title">Week 5 – 12/06/25</div>
+                <p>
+                  Integrated the live thermal feed into Flask, connected it to the website, and tested everything
+                  together. Focused on performance, blur, and mode stability for demo day.
+                </p>
+              </div>
+              <a class="button small"
+                 href="docs/Weekly Progress Report 12-6-2025.docx"
+                 download>Download</a>
+            </div>
+
+          </div>
+        </article>
+      </div>
     </div>
   </section>
 
   <footer class="footer">
-    IoT Thermal Camera Project – Selena, Bryce, Jackson
+    IoT Thermal Camera Project 
   </footer>
 </body>
 </html>
