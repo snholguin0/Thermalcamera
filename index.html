@@ -14,13 +14,12 @@
     <div class="hero-content">
       <h1>Thermal Camera Live Demo</h1>
       <p>
-        Raspberry Pi 4 + AMG8833 thermal sensor. Move your hand and watch the heat map react in real time.
+        Raspberry Pi 4B + AMG8833 thermal sensor. Move your hand and watch the heat map react in real time.
       </p>
 
       <div class="hero-tags">
-        <span>Raspberry Pi 4</span>
-        <span>AMG8833</span>
-        <span>Python + matplotlib</span>
+        <span>Raspberry Pi 4B</span>
+        <span>Python</span>
       </div>
 
       <div class="hero-actions">
@@ -99,44 +98,60 @@
     </div>
   </section>
 
-  <!-- HOW IT WORKS + MODES -->
-<section class="section alt">
-  <div class="section-header">
-    <h2>How It Works</h2>
-    <p>A quick overview of the hardware, software, and interaction modes of the IoT thermal camera system.</p>
-  </div>
-
-  <div class="grid two">
-    <div class="card">
-      <h3>Hardware</h3>
-      <ul>
-        <li>Raspberry Pi 4 Model B</li>
-        <li>Adafruit AMG8833 8×8 thermal camera</li>
-        <li>Solderless breadboard + jumper wires</li>
-      </ul>
-
-      <h3 style="margin-top: 1rem;">Software</h3>
-      <ul>
-        <li>Python + I²C to read the AMG8833</li>
-        <li>NumPy + SciPy for smoothing and processing</li>
-        <li>Flask server to stream frames to the website</li>
-      </ul>
+   <!-- HOW IT WORKS + MODES -->
+  <section class="section alt" id="how-it-works">
+    <div class="section-header">
+      <h2>How It Works</h2>
+      <p>
+        A quick overview of the hardware, software, and interaction modes of the IoT thermal
+        camera system.
+      </p>
     </div>
 
-    <div class="card">
-      <h3>Modes</h3>
+    <div class="grid two how-grid">
+      <div class="card">
+        <h3>Hardware</h3>
+        <ul>
+          <li>Raspberry Pi 4 Model B</li>
+          <li>Adafruit AMG8833 8×8 thermal camera</li>
+          <li>Solderless breadboard + jumper wires</li>
+        </ul>
 
-      <strong>Mode 0 – Thermal View</strong>
-      <p>A clean upscaled heat map of the 8×8 sensor for basic visualization.</p>
+        <h3>Software</h3>
+        <ul>
+          <li>Python + I²C to read the AMG8833</li>
+          <li>NumPy + SciPy for smoothing and processing</li>
+          <li>Flask server to stream frames to the website</li>
+        </ul>
+      </div>
 
-      <strong>Mode 1 – Heat Pen</strong>
-      <p>The hottest spot of your hand acts like a “pen,” letting you draw heat strokes that fade over time.</p>
+      <div class="card">
+        <h3>Interaction Modes</h3>
 
-      <strong>Mode 2 – Laser Grid</strong>
-      <p>The image is divided into four zones. When heat rises in a zone, that square highlights to show it was triggered.</p>
+        <div class="mode-blurb">
+          <h4>Mode 0 – Thermal View</h4>
+          <p>A clean upscaled heat map of the 8×8 sensor for basic visualization.</p>
+        </div>
+
+        <div class="mode-blurb">
+          <h4>Mode 1 – Heat Pen</h4>
+          <p>
+            The hottest spot of your hand acts like a pen, letting you draw heat strokes
+            that slowly fade over time.
+          </p>
+        </div>
+
+        <div class="mode-blurb">
+          <h4>Mode 2 – Laser Grid</h4>
+          <p>
+            The image is split into four zones. When a zone heats up past the background,
+            its square highlights to show it was triggered.
+          </p>
+        </div>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
+
 
 
   <!-- PROJECT PHOTOS -->
