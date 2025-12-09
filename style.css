@@ -258,3 +258,64 @@ body {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   margin-top: 1rem;
 }
+/* ----------------- */
+/* Reports page      */
+/* ----------------- */
+
+.reports-shell {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.doc-section {
+  background: #0c0f1c;
+  border-radius: 0.9rem;
+  padding: 1.4rem 1.6rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 0.9rem;
+  margin-bottom: 1.6rem;
+}
+
+.doc-section h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.4rem;
+}
+
+.report-list {
+  list-style: none;
+  margin-top: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.report-item {
+  display: flex;
+  gap: 0.9rem;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0.75rem 0.9rem;
+  border-radius: 0.7rem;
+  background: #101320;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.report-main p {
+  font-size: 0.88rem;
+  opacity: 0.9;
+}
+
+.report-title {
+  font-weight: 600;
+  margin-bottom: 0.15rem;
+  font-size: 0.95rem;
+}
+
+/* Stack button under text on small screens */
+@media (max-width: 640px) {
+  .report-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+

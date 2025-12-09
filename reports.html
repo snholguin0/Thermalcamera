@@ -12,7 +12,7 @@
   <header class="hero">
     <div class="hero-content">
       <h1>Weekly Reports &amp; Research Paper</h1>
-      <p>Read quick summaries or download the full documents for the IoT Thermal Camera project.</p>
+      <p>Quick summaries plus downloadable documents for the IoT Thermal Camera project.</p>
       <div class="hero-actions">
         <a href="index.html" class="button secondary">Back to Live Demo</a>
       </div>
@@ -21,106 +21,102 @@
 
   <!-- MAIN CONTENT -->
   <section class="section alt">
-    <div class="reports-container">
+    <div class="reports-shell">
       <header class="section-header">
         <h2>Project Documents</h2>
-        <p>Summaries below; each download includes full details and supporting screenshots.</p>
+        <p>Each summary fits on this page. Use the download buttons for full write-ups.</p>
       </header>
 
-      <div class="reports-grid">
-        <!-- RESEARCH PAPER -->
-        <article class="doc-card doc-card-main">
-          <h3>Research Paper</h3>
-          <p>
-            Full write-up of the Raspberry Pi thermal camera system: hardware, sensor behavior, image processing
-            pipeline, user interface design, testing, and how this setup connects to real-world IoT applications.
-          </p>
-          <a class="button primary"
-             href="docs/Research Project.docx"
-             download>
-            Download Research Paper
-          </a>
-        </article>
+      <!-- Research paper card -->
+      <article class="doc-section">
+        <h3>Research Paper</h3>
+        <p>
+          Full write-up of the Raspberry Pi thermal camera system: hardware, sensor behavior, image processing
+          pipeline, user interface design, testing, and how this setup connects to real-world IoT applications.
+        </p>
+        <a class="button primary"
+           href="docs/Research Project.docx"
+           download>
+          Download Research Paper
+        </a>
+      </article>
 
-        <!-- WEEKLY REPORTS -->
-        <article class="doc-card">
-          <h3>Weekly Progress Reports</h3>
+      <!-- Weekly reports card -->
+      <article class="doc-section">
+        <h3>Weekly Progress Reports</h3>
 
-          <div class="doc-list">
-
-            <div class="doc-row">
-              <div class="doc-text">
-                <div class="doc-title">Week 1 – 11/01/25</div>
-                <p>
-                  Kicked off the project. Set up the Raspberry Pi, installed libraries, verified communication with the
-                  AMG8833 sensor, and confirmed that raw pixel data looked correct.
-                </p>
-              </div>
-              <a class="button small"
-                 href="docs/Weekly Progress Report 11-01-2025.docx"
-                 download>Download</a>
+        <ul class="report-list">
+          <li class="report-item">
+            <div class="report-main">
+              <div class="report-title">Week 1 – 11/01/25</div>
+              <p>
+                Kicked off the project. Set up the Raspberry Pi, installed libraries, verified communication with the
+                AMG8833 sensor, and confirmed that raw pixel data looked correct.
+              </p>
             </div>
+            <a class="button small"
+               href="docs/Weekly Progress Report 11-01-2025.docx"
+               download>Download</a>
+          </li>
 
-            <div class="doc-row">
-              <div class="doc-text">
-                <div class="doc-title">Week 2 – 11/08/25 – Circuits Week</div>
-                <p>
-                  Focused on wiring and circuits. Cleaned up the breadboard layout, checked voltages, and made sure the
-                  sensor readings stayed stable before moving on to visuals.
-                </p>
-              </div>
-              <a class="button small"
-                 href="docs/Weekly Progress Report - 11_08_2025- the circuits.docx"
-                 download>Download</a>
+          <li class="report-item">
+            <div class="report-main">
+              <div class="report-title">Week 2 – 11/08/25 – Circuits Week</div>
+              <p>
+                Focused on wiring and circuits. Cleaned up the breadboard layout, checked voltages, and made sure the
+                sensor readings stayed stable before moving on to visuals.
+              </p>
             </div>
+            <a class="button small"
+               href="docs/Weekly Progress Report - 11_08_2025- the circuits.docx"
+               download>Download</a>
+          </li>
 
-            <div class="doc-row">
-              <div class="doc-text">
-                <div class="doc-title">Week 3 – 11/15/25</div>
-                <p>
-                  Added image smoothing, color mapping, and early motion detection. Tried different upscale values and
-                  temperature thresholds so heat patterns were easier to see.
-                </p>
-              </div>
-              <a class="button small"
-                 href="docs/Weekly Progress Report 11-15-25.docx"
-                 download>Download</a>
+          <li class="report-item">
+            <div class="report-main">
+              <div class="report-title">Week 3 – 11/15/25</div>
+              <p>
+                Added image smoothing, color mapping, and early motion detection. Tried different upscale values and
+                temperature thresholds so heat patterns were easier to see.
+              </p>
             </div>
+            <a class="button small"
+               href="docs/Weekly Progress Report 11-15-25.docx"
+               download>Download</a>
+          </li>
 
-            <div class="doc-row">
-              <div class="doc-text">
-                <div class="doc-title">Week 4 – 11/22/25</div>
-                <p>
-                  Built the three interaction modes: simple thermal view, heat pen, and laser grid. Tuned each mode,
-                  captured screenshots, and prepared for web integration.
-                </p>
-              </div>
-              <a class="button small"
-                 href="docs/Weekly Progress Report - 11_22_2025.docx"
-                 download>Download</a>
+          <li class="report-item">
+            <div class="report-main">
+              <div class="report-title">Week 4 – 11/22/25</div>
+              <p>
+                Built the three interaction modes: simple thermal view, heat pen, and laser grid. Tuned each mode,
+                captured screenshots, and prepared for web integration.
+              </p>
             </div>
+            <a class="button small"
+               href="docs/Weekly Progress Report - 11_22_2025.docx"
+               download>Download</a>
+          </li>
 
-            <div class="doc-row">
-              <div class="doc-text">
-                <div class="doc-title">Week 5 – 12/06/25</div>
-                <p>
-                  Integrated the live thermal feed into Flask, connected it to the website, and tested everything
-                  together. Focused on performance, blur, and mode stability for demo day.
-                </p>
-              </div>
-              <a class="button small"
-                 href="docs/Weekly Progress Report 12-6-2025.docx"
-                 download>Download</a>
+          <li class="report-item">
+            <div class="report-main">
+              <div class="report-title">Week 5 – 12/06/25</div>
+              <p>
+                Integrated the live thermal feed into Flask, connected it to the website, and tested everything
+                together. Focused on performance, blur, and mode stability for demo day.
+              </p>
             </div>
-
-          </div>
-        </article>
-      </div>
+            <a class="button small"
+               href="docs/Weekly Progress Report 12-6-2025.docx"
+               download>Download</a>
+          </li>
+        </ul>
+      </article>
     </div>
   </section>
 
   <footer class="footer">
-    IoT Thermal Camera Project 
+    IoT Thermal Camera Project
   </footer>
 </body>
 </html>
