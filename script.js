@@ -1,7 +1,7 @@
 // script.js
 
 // Base URL for your Pi/ngrok
-const PI_BASE = "https://subpleural-malissa-wagglingly.ngrok-free.dev";
+const PI_BASE = "https://098d57d37bac.ngrok-free.app";
 
 // Image stream endpoint
 const STREAM_URL = PI_BASE + "/live";
