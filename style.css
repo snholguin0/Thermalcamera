@@ -1,3 +1,4 @@
+
 *,
 *::before,
 *::after {
@@ -13,6 +14,7 @@ body {
   line-height: 1.5;
 }
 
+/* HERO */
 .hero {
   background: radial-gradient(circle at top left, #ff7a18, #af002d 40%, #05060a 80%);
   padding: 3rem 1.5rem 4rem;
@@ -52,6 +54,7 @@ body {
   margin-top: 1.5rem;
 }
 
+/* BUTTONS */
 .button {
   display: inline-block;
   padding: 0.55rem 1.2rem;
@@ -87,6 +90,7 @@ body {
   box-shadow: 0 0.3rem 0.9rem rgba(0, 0, 0, 0.5);
 }
 
+/* SECTIONS */
 .section {
   padding: 2.5rem 1.5rem;
 }
@@ -110,6 +114,30 @@ body {
   opacity: 0.9;
 }
 
+/* GENERIC GRID + CARD (used for How It Works, reports, etc.) */
+.grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  gap: 1.5rem;
+}
+
+.grid.two {
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.card {
+  background: #0c0f1c;
+  border-radius: 0.9rem;
+  padding: 1.25rem 1.4rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.card h3 {
+  margin-bottom: 0.6rem;
+}
+
+/* LIVE DEMO LAYOUT */
 .demo-layout {
   max-width: 1100px;
   margin: 0 auto;
@@ -130,9 +158,7 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-/* -------------------------- */
-/*  SQUARE THERMAL VIEW FIX   */
-/* -------------------------- */
+/* SQUARE THERMAL VIEW */
 .demo-frame {
   position: relative;
   background: #000;
@@ -141,25 +167,24 @@ body {
 
   width: 100%;
   max-width: 420px;
-  aspect-ratio: 1 / 1;     /* Perfect square */
-  
-  margin: 0 auto;
+  aspect-ratio: 1 / 1;
 
+  margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  padding: 0;
 }
 
 #thermal-stream {
   width: 100%;
   height: 100%;
-  object-fit: cover;        /* Fills square with no black bars */
+  object-fit: cover;
   image-rendering: pixelated;
   display: block;
 }
 
+/* If you want to hide the label over the image, set display:none here */
 .stream-overlay {
   position: absolute;
   left: 0;
@@ -172,8 +197,7 @@ body {
   font-size: 0.8rem;
 }
 
-/* -------------------------- */
-
+/* DEMO CONTROLS */
 .demo-controls {
   margin-top: 0.75rem;
   display: flex;
@@ -208,6 +232,7 @@ body {
   opacity: 0.85;
 }
 
+/* DEMO SIDE PANEL */
 .demo-side {
   padding: 1rem;
   border-radius: 0.9rem;
@@ -250,18 +275,59 @@ body {
   font-size: 0.78rem;
 }
 
-.footer {
-  padding: 1.2rem 1.5rem 2rem;
-  text-align: center;
-  font-size: 0.8rem;
-  color: rgba(255, 255, 255, 0.7);
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  margin-top: 1rem;
+/* HOW IT WORKS TWEAKS */
+.how-grid {
+  align-items: flex-start;
 }
-/* ----------------- */
-/* Reports page      */
-/* ----------------- */
 
+.how-grid ul {
+  margin-left: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.mode-blurb + .mode-blurb {
+  margin-top: 0.8rem;
+}
+
+.mode-blurb h4 {
+  font-size: 0.95rem;
+  margin-bottom: 0.2rem;
+}
+
+.mode-blurb p {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+/* PROJECT PHOTOS */
+.gallery-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  gap: 1.2rem;
+}
+
+.gallery-grid.three {
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.gallery-item {
+  background: #0c0f1c;
+  border-radius: 0.9rem;
+  padding: 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery-item img {
+  width: 100%;
+  border-radius: 0.6rem;
+  display: block;
+}
+
+/* REPORTS PAGE */
 .reports-shell {
   max-width: 900px;
   margin: 0 auto;
@@ -311,7 +377,6 @@ body {
   font-size: 0.95rem;
 }
 
-/* Stack button under text on small screens */
 @media (max-width: 640px) {
   .report-item {
     flex-direction: column;
@@ -319,34 +384,12 @@ body {
   }
 }
 
-/* How It Works layout tweaks */
-.how-grid {
-  align-items: flex-start;
-}
-
-.how-grid .card {
-  height: 100%;
-}
-
-.how-grid h3 {
-  margin-bottom: 0.6rem;
-}
-
-.how-grid ul {
-  margin-left: 1.2rem;
-  margin-bottom: 1rem;
-}
-
-.mode-blurb + .mode-blurb {
-  margin-top: 0.8rem;
-}
-
-.mode-blurb h4 {
-  font-size: 0.95rem;
-  margin-bottom: 0.2rem;
-}
-
-.mode-blurb p {
-  font-size: 0.9rem;
-  opacity: 0.9;
+/* FOOTER */
+.footer {
+  padding: 1.2rem 1.5rem 2rem;
+  text-align: center;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.7);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 1rem;
 }
