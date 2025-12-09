@@ -1,10 +1,12 @@
-// When you have a real HTTP stream from the Pi, put it here.
-const STREAM_URL = "http://YOUR-PI-IP-OR-DOMAIN:5000/stream";
+// Live stream URL from your Pi via ngrok
+const STREAM_URL =
+  "https://subpleural-malissa-wagglingly.ngrok-free.dev/live";
 
 const img = document.getElementById("thermal-stream");
 const modeLabel = document.getElementById("mode-label");
 const modeButtons = document.querySelectorAll(".mode-btn");
 
+// Simple poll with cache-busting param so the browser refreshes the image
 function refreshStream() {
   const url = STREAM_URL + "?t=" + Date.now();
   img.src = url;
