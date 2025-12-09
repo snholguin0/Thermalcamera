@@ -22,18 +22,10 @@
 
       <!-- Main live demo button -->
       <div class="hero-actions">
-        <a
-          href="https://subpleural-malissa-wagglingly.ngrok-free.dev/live"
-          target="_blank"
-          class="button primary"
-          
-          <a href="reports.html" 
-          class="button secondary small">Reports & Research</a>
+  <a href="reports.html" class="button primary">Reports & Research</a>
+  <a href="#live" class="button secondary">Launch Live Demo</a>
+</div>
 
-        >
-          Launch Live Demo
-        </a>
-      </div>
     </div>
   </header>
 
@@ -98,112 +90,35 @@
 
     <section class="section alt" id="how-it-works">
       <div class="section-header">
-        <h2>How It Works</h2>
-      </div>
-      <div class="grid two">
-        <div>
-          <h3>Hardware</h3>
-          <ul>
-            <li>Raspberry Pi 4 Model B</li>
-            <li>Adafruit AMG8833 8×8 thermal camera</li>
-            <li>Solderless breadboard + jumper wires</li>
-          </ul>
-        </div>
-        <div>
-          <h3>Software</h3>
-          <ul>
-            <li>Python to read the AMG8833 over I²C</li>
-            <li>NumPy + SciPy for processing and smoothing</li>
-            <li>matplotlib for the color heat map</li>
-            <li>Three demo modes: thermal, heat pen, laser grid</li>
-          </ul>
-        </div>
-      </div>
-    </section>
+        <!-- HOW IT WORKS + MODES SECTION -->
+<section class="section alt">
+  <div class="grid two">
+    <div class="card">
+      <!-- your existing "How It Works" header + list go here -->
+    </div>
 
-    <section class="section" id="modes">
-      <div class="section-header">
-        <h2>Modes</h2>
-      </div>
+    <div class="card">
+      <!-- your existing "Modes" header + three mode descriptions go here -->
+    </div>
+  </div>
+</section>
 
-      <div class="grid three">
-        <div class="card">
-          <h3>Mode 0 – Thermal View</h3>
-          <p>
-            A clean heat map of the 8×8 sensor, upscaled for smoother color gradients.
-            Great for showing the basic idea of thermal imaging and how your hand heats up
-            the scene.
-          </p>
-          <a
-            href="https://subpleural-malissa-wagglingly.ngrok-free.dev/live"
-            target="_blank"
-            class="button secondary small"
-          >
-            Try Mode 0 Live
-          </a>
-        </div>
+<!-- PROJECT PHOTOS SECTION -->
+<section class="section">
+  <div class="section-header">
+    <h2>Project Photos</h2>
+  </div>
 
-        <div class="card">
-          <h3>Mode 1 – Heat Pen</h3>
-          <p>
-            The hottest part of your hand becomes a “pen.” Move your hand to draw bright
-            blobs that slowly fade away. Kids can “paint” on the screen with heat.
-          </p>
-          <a
-            href="https://subpleural-malissa-wagglingly.ngrok-free.dev/live"
-            target="_blank"
-            class="button secondary small"
-          >
-            Try Mode 1 Live
-          </a>
-        </div>
-
-        <div class="card">
-          <h3>Mode 2 – Laser Grid</h3>
-          <p>
-            The image is split into four zones. When a zone warms up past the background,
-            its square turns red and the text shows which zones were “tripped.”
-          </p>
-          <a
-            href="https://subpleural-malissa-wagglingly.ngrok-free.dev/live"
-            target="_blank"
-            class="button secondary small"
-          >
-            Try Mode 2 Live
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <section class="section alt" id="gallery">
-      <div class="section-header">
-        <h2>Project Photos</h2>
-        <p>Add screenshots and build photos here.</p>
-      </div>
-
-      <div class="grid three gallery-grid">
-        <div class="gallery-item">
-          <img src="images/body outline.png" alt="Thermal hand view" />
-        </div>
-
-        <div class="gallery-item">
-          <img src="images/pen.png" alt="Heat pen drawing" />
-        </div>
-
-        <div class="gallery-item">
-          <img src="images/laser grid.png" alt="Laser grid zones" />
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <p>
-      Built with Raspberry Pi and Python ·
-      <span>Thermal Camera Project</span>
-    </p>
-  </footer>
-
-  <script src="script.js"></script>
-</body>
-</html>
+  <div class="grid three gallery-grid">
+    <!-- put your three images here -->
+    <div class="gallery-item">
+      <img src="images/body outline.png" alt="Thermal body outline" style="max-width:100%; border-radius:0.7rem;" />
+    </div>
+    <div class="gallery-item">
+      <img src="images/pen.png" alt="Heat pen drawing" style="max-width:100%; border-radius:0.7rem;" />
+    </div>
+    <div class="gallery-item">
+      <img src="images/laser grid.png" alt="Laser grid zones" style="max-width:100%; border-radius:0.7rem;" />
+    </div>
+  </div>
+</section>
