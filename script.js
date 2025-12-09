@@ -1,7 +1,7 @@
 
 
 // Base URL for the Pi/ngrok
-const PI_BASE = "https://098d57d37bac.ngrok-free.app";
+const PI_BASE = "https://bf66fd5e2af7.grok-free.app";
 
 const STREAM_URL = PI_BASE + "/live";
 
