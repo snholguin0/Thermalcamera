@@ -114,7 +114,6 @@ body {
   opacity: 0.9;
 }
 
-/* GENERIC GRID + CARD (used for How It Works, reports, etc.) */
 .grid {
   max-width: 1100px;
   margin: 0 auto;
@@ -184,7 +183,6 @@ body {
   display: block;
 }
 
-/* If you want to hide the label over the image, set display:none here */
 .stream-overlay {
   position: absolute;
   left: 0;
@@ -197,7 +195,6 @@ body {
   font-size: 0.8rem;
 }
 
-/* DEMO CONTROLS */
 .demo-controls {
   margin-top: 0.75rem;
   display: flex;
@@ -275,7 +272,7 @@ body {
   font-size: 0.78rem;
 }
 
-/* HOW IT WORKS TWEAKS */
+/* HOW IT WORKS */
 .how-grid {
   align-items: flex-start;
 }
