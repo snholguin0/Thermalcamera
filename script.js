@@ -1,7 +1,7 @@
 
 
 // Base URL for the Pi/ngrok
-const PI_BASE = "https://bf66fd5e2af7.grok-free.app";
+const PI_BASE = "http://10.104.14.26:6080/vnc.html";
 
 const STREAM_URL = PI_BASE + "/live";
 
