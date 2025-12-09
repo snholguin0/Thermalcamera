@@ -2,123 +2,174 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Thermal Camera Demo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thermal Camera Live Demo</title>
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
+
+  <!-- HERO -->
   <header class="hero">
     <div class="hero-content">
       <h1>Thermal Camera Live Demo</h1>
       <p>
-        Raspberry Pi + AMG8833 thermal sensor. Move your hand and watch the heat map react
-        in real time.
+        Raspberry Pi 4 + AMG8833 thermal sensor. Move your hand and watch the heat map react in real time.
       </p>
+
       <div class="hero-tags">
         <span>Raspberry Pi 4</span>
         <span>AMG8833</span>
         <span>Python + matplotlib</span>
       </div>
 
-      <!-- Main live demo button -->
       <div class="hero-actions">
-  <a href="reports.html" class="button primary">Reports & Research</a>
-  <a href="#live" class="button secondary">Launch Live Demo</a>
-</div>
-
+        <a href="reports.html" class="button primary">Reports &amp; Research</a>
+        <a href="#live" class="button secondary">Launch Live Demo</a>
+      </div>
     </div>
   </header>
 
-  <main>
-    <!-- LIVE DEMO SECTION -->
-    <section class="section" id="live-demo">
-      <div class="section-header">
-        <h2>Live Thermal View</h2>
-        <p>
-          This panel shows the live output from the thermal camera running on the Raspberry Pi.
-          Use the mode buttons to switch between views on the Pi.
+  <!-- LIVE DEMO -->
+  <section id="live" class="section alt">
+    <div class="section-header">
+      <h2>Live Thermal View</h2>
+      <p>
+        This panel shows the live output from the thermal camera running on the Raspberry Pi.
+        Use the mode buttons to switch between views on the Pi.
+      </p>
+    </div>
+
+    <div class="demo-layout">
+      <!-- Left: stream -->
+      <div class="demo-panel">
+        <div class="demo-frame">
+          <img
+            id="thermal-stream"
+            src=""
+            alt="Live thermal camera view"
+          />
+          <div class="stream-overlay" id="stream-overlay-text">
+            Mode 0: Simple thermal view
+          </div>
+        </div>
+
+        <div class="demo-controls">
+          <button class="mode-btn mode-btn-active" data-mode="0">
+            Mode 0 – Thermal
+          </button>
+          <button class="mode-btn" data-mode="1">
+            Mode 1 – Heat Pen
+          </button>
+          <button class="mode-btn" data-mode="2">
+            Mode 2 – Laser Grid
+          </button>
+        </div>
+
+        <p class="demo-note">
+          The Pi listens for mode changes from the web page. Make sure the Pi is running
+          <code>server.py</code> and ngrok so this panel can reach it.
         </p>
       </div>
 
-      <div class="demo-layout">
-        <div class="demo-panel">
-          <div class="demo-frame">
-            <img
-              id="thermal-stream"
-              src=""
-              alt="Live thermal camera stream"
-            />
-            <div id="stream-overlay" class="stream-overlay">
-              <span id="mode-label">Mode 0: Simple thermal view</span>
-            </div>
-          </div>
+      <!-- Right: instructions -->
+      <aside class="demo-side">
+        <h3>Live demo</h3>
+        <ol>
+          <li>Place hand 3–5 inches above the sensor.</li>
+          <li>Move your hand slowly so the heat has time to show up.</li>
+          <li>Use the buttons to switch between demo modes.</li>
+        </ol>
 
-          <div class="demo-controls">
-            <button data-mode="0" class="mode-btn mode-btn-active">
-              Mode 0 – Thermal
-            </button>
-            <button data-mode="1" class="mode-btn">
-              Mode 1 – Heat Pen
-            </button>
-            <button data-mode="2" class="mode-btn">
-              Mode 2 – Laser Grid
-            </button>
-          </div>
+        <ul class="key-list">
+          <li>
+            <span class="key">Mode 0</span>
+            <span>Simple thermal view</span>
+          </li>
+          <li>
+            <span class="key">Mode 1</span>
+            <span>Heat pen drawing</span>
+          </li>
+          <li>
+            <span class="key">Mode 2</span>
+            <span>Laser grid + zones</span>
+          </li>
+        </ul>
+      </aside>
+    </div>
+  </section>
 
-          <p class="demo-note">
-            The Pi listens for keyboard input directly, so these buttons only change the label
-            on the website. On the Pi, press <strong>m</strong> to cycle modes.
-          </p>
-        </div>
+  <!-- HOW IT WORKS + MODES -->
+  <section class="section alt">
+    <div class="grid two">
 
-        <aside class="demo-side">
-          <h3>live demo</h3>
-          <ol>
-            <li>place hand 3–5 inches above the sensor.</li>
-            <li>Move your hand slowly so the heat has time to show up.</li>
-            <li>Switch modes on the Pi with the keyboard:</li>
-          </ol>
-          <ul class="key-list">
-            <li><span class="key">m</span> – change mode (0 → 1 → 2)</li>
-          </ul>
-          <p>
-            The web page just mirrors whatever the Pi is currently displaying.
-          </p>
-        </aside>
+      <div class="card">
+        <h3>How It Works</h3>
+        <p><strong>Hardware</strong></p>
+        <ul>
+          <li>Raspberry Pi 4 Model B</li>
+          <li>Adafruit AMG8833 8×8 thermal camera</li>
+          <li>Solderless breadboard + jumper wires</li>
+        </ul>
+
+        <p style="margin-top:.5rem;"><strong>Software</strong></p>
+        <ul>
+          <li>Python + I²C to read the AMG8833</li>
+          <li>NumPy + SciPy for processing and smoothing</li>
+          <li>Flask server to stream frames to the website</li>
+        </ul>
       </div>
-    </section>
 
-    <section class="section alt" id="how-it-works">
-      <div class="section-header">
-        <!-- HOW IT WORKS + MODES SECTION -->
-<section class="section alt">
-  <div class="grid two">
-    <div class="card">
-      <!-- your existing "How It Works" header + list go here -->
+      <div class="card">
+        <h3>Modes</h3>
+
+        <p><strong>Mode 0 – Thermal View</strong><br>
+          A clean heat map of the 8×8 sensor, upscaled for smoother color gradients.
+        </p>
+
+        <p><strong>Mode 1 – Heat Pen</strong><br>
+          The hottest part of your hand becomes a “pen.” Moving your hand draws bright blobs that slowly fade.
+        </p>
+
+        <p><strong>Mode 2 – Laser Grid</strong><br>
+          The image is split into four zones. When a zone warms past the background, its square turns red and the
+          text shows which zones were “tripped.”
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PROJECT PHOTOS -->
+  <section class="section">
+    <div class="section-header">
+      <h2>Project Photos</h2>
+      <p>Snapshots from each of the main demo modes.</p>
     </div>
 
-    <div class="card">
-      <!-- your existing "Modes" header + three mode descriptions go here -->
+    <div class="grid three gallery-grid">
+      <div class="gallery-item">
+        <img src="images/body outline.png"
+             alt="Simple thermal view"
+             style="max-width:100%; border-radius:0.7rem;">
+      </div>
+      <div class="gallery-item">
+        <img src="images/pen.png"
+             alt="Heat pen mode drawing"
+             style="max-width:100%; border-radius:0.7rem;">
+      </div>
+      <div class="gallery-item">
+        <img src="images/laser grid.png"
+             alt="Laser grid zones"
+             style="max-width:100%; border-radius:0.7rem;">
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- PROJECT PHOTOS SECTION -->
-<section class="section">
-  <div class="section-header">
-    <h2>Project Photos</h2>
-  </div>
+  <footer class="footer">
+    IoT Thermal Camera Project – Selena Holguin
+  </footer>
 
-  <div class="grid three gallery-grid">
-    <!-- put your three images here -->
-    <div class="gallery-item">
-      <img src="images/body outline.png" alt="Thermal body outline" style="max-width:100%; border-radius:0.7rem;" />
-    </div>
-    <div class="gallery-item">
-      <img src="images/pen.png" alt="Heat pen drawing" style="max-width:100%; border-radius:0.7rem;" />
-    </div>
-    <div class="gallery-item">
-      <img src="images/laser grid.png" alt="Laser grid zones" style="max-width:100%; border-radius:0.7rem;" />
-    </div>
-  </div>
-</section>
+  <script src="script.js"></script>
+</body>
+</html>
