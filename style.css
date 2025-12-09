@@ -48,12 +48,10 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-/* hero actions */
 .hero-actions {
   margin-top: 1.5rem;
 }
 
-/* buttons */
 .button {
   display: inline-block;
   padding: 0.55rem 1.2rem;
@@ -132,31 +130,35 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
+/* -------------------------- */
+/*  SQUARE THERMAL VIEW FIX   */
+/* -------------------------- */
 .demo-frame {
   position: relative;
-  background: #05060a;
+  background: #000;
   border-radius: 0.65rem;
-  overflow: hidden;
-  border: 1px solid rgba(255,255,255,0.08);
-  padding: 0;         
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  width: 100%;
+  max-width: 420px;
+  aspect-ratio: 1 / 1;     /* Perfect square */
+  
+  margin: 0 auto;
+
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
+  padding: 0;
 }
-
-
 
 #thermal-stream {
   width: 100%;
-  height: auto;
-  max-width: 512px;
-  object-fit: contain;
+  height: 100%;
+  object-fit: cover;        /* Fills square with no black bars */
   image-rendering: pixelated;
   display: block;
-  margin: 0 auto;
 }
-
-
 
 .stream-overlay {
   position: absolute;
@@ -169,6 +171,8 @@ body {
     "Courier New", monospace;
   font-size: 0.8rem;
 }
+
+/* -------------------------- */
 
 .demo-controls {
   margin-top: 0.75rem;
@@ -244,53 +248,6 @@ body {
   font-family: "SF Mono", ui-monospace, Menlo, Monaco, Consolas, "Liberation Mono",
     "Courier New", monospace;
   font-size: 0.78rem;
-}
-
-.grid {
-  max-width: 1100px;
-  margin: 0 auto;
-  display: grid;
-  gap: 1.2rem;
-}
-
-.grid.two {
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-}
-
-.grid.three {
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-}
-
-.card {
-  background: #0c0f1c;
-  border-radius: 0.9rem;
-  padding: 1rem;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  font-size: 0.9rem;
-}
-
-.card h3 {
-  margin-bottom: 0.4rem;
-  font-size: 1.05rem;
-}
-
-.gallery-grid {
-  margin-top: 0.5rem;
-}
-
-.gallery-item {
-  border-radius: 0.7rem;
-  min-height: 150px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.85rem;
-  text-align: center;
-}
-
-.gallery-item.placeholder {
-  border: 1px dashed rgba(255, 255, 255, 0.3);
-  color: rgba(255, 255, 255, 0.65);
 }
 
 .footer {
